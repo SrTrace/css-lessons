@@ -33,23 +33,15 @@ table {
 /* конец кода сброса стилей браузера */
 
 body {
-    background-color: rgb(238, 243, 250);
     font-family: Roboto, Courier, sans-serif;
+    opacity: 1;
 }
-/*фон позади макета*/
 .container {
-    background-color: white;
     max-width: 1280px;
     margin: 0 auto;
 }
 /* Редактируем заголовок*/
-    header{
-        height: 81px;
-    }
     ul.nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
         text-align: center;
     }
     .nav li {
@@ -57,55 +49,71 @@ body {
     }
     .nav a {
         display: inline-block;
-        margin: 0 auto;
-        margin-top: 32px;
-        margin-bottom: 35px;
-        height: 14px; /* не знаю зачем поставил*/
-        padding: 0 35px;
+        margin: 28px 35px;
+        padding: 2px;
         font-size: 18px;
         font-weight: bold;
-        text-align: left;
         color: rgb(	22, 160, 133);
+        opacity: 1;
         text-decoration: none;
         text-transform: uppercase;
+        transition: all 400ms;
+    }
+    .nav a:hover {
+        color: rgb(	255, 255, 255);
+        background-color: rgb(22, 160, 133);
     }
 /* Редактирует основной контент*/
 .main {
-    background-color: rgb(245, 246, 247);
+    background-color: rgb(238, 243, 250);
 }
 .main h1 {
     text-transform: uppercase;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    padding: 59px 0 34px 0;
+    padding-top: 56px;
 }
 .main p {
-    margin: 0 110px 0;
+    margin: 34px 110px;
     text-align: center;
     font-size: 16px;
 }
-.main form {
+.main a {
+    display: block;
+    width: 193px;
     text-align: center;
-    margin: 40px 0 40px 0;
+    margin: 40px auto;
+    text-decoration: none;
 }
+
 .main button {
     background-color: #16A085;
-    width: 193px;
-    height: 52px;
+    width: 100%;
+    padding: 18px 0;
     color: white;
-    font-size: 12px;/* подбрать размер шрифта*/
+    text-transform: uppercase;
+    font-size: 12px;
     border: 1px solid #16A085;
     border-radius: 5px;
     margin-bottom: 94px;
+    transition: all 200ms;
+}
+.main button:active, .main button:focus {
+    outline: none;
+}
+.main button:hover {
+    color: #16A085;
+    background-color: white;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 16px 0 rgba(29, 107, 178, 0.25);
 }
 /* Редактируем нижний конлонтитул*/
 footer {
-    margin-top: 40px;
     padding: 5px 104px 45px 50px;
 }
 footer p {
+    font-size: 16px;
     text-align: right;
     font-weight: bold;
-    /*padding: 47px 104px 45px 768px;*/
 }
