@@ -1,0 +1,106 @@
+html {
+    font-family: AdobeInvisFont, Courier, MyriadPro-Regular, sans-serif;
+}
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    text-decoration-color: black;
+    display: inline-block;
+}
+/*Редактирует заголовок*/
+.logo {
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    padding: 64px 0 44px 0;
+}
+.logo span {
+    color: #4BCAFF;
+}
+.topMenu {
+    background-color: #35444F;
+}
+.topMenu a {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    padding: 22px 41px 21px 41px;
+    border-left: 1px solid #35444F;
+    border-right: 1px solid #35444F;
+}
+.topMenu a:hover {
+    background-color: #222F3A;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+container {
+    /*width: 1280px;*/
+    position: absolute;
+}
+.sidebar {
+    float: left;
+    width: 27%;
+    border: 1px solid #000;
+}
+.sidebar a {
+    padding: 30px 44px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    color: #495863;
+}
+.sidebar a:hover {
+    color: black;
+    padding: 30px 69px;
+    background-color: #DBDBDB;
+}
+.main {
+    margin-top: 51px;
+    margin-left: 395px;
+    margin-bottom: 21px;
+}
+.main .imageBlock {
+    /*width: 885px;*/
+    /*height: 529px;*/
+    background-image: url("../image/top-img-fon@1X.png");
+    background-repeat: no-repeat;
+
+}
+.main .goal {
+    display: inline-block;
+    background-image: url("../image/top-img-fon@1X.png");
+    background-origin: content-box;
+    margin-bottom: 50px;
+    /*top: 150px;*/
+    /*left: 150px;*/
+}
+.main p {
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 40px 30px 30px;
+}
+footer {
+    position: absolute;
+    margin-top: 51px;
+    border-bottom: 24px solid #fff;
+    background-color: #B4B7BA;
+}
+.copyright {
+    float: right;
+    margin: 25px 34px 21px 0;
+    font-size: 24px;
+}
+.bottomMenu {
+    margin: 51px 405px 21px 24px;
+    font-size: 24px;
+}
+.bottomMenu a {
+    color: #000;
+}
+.bottomMenu a:hover {
+    color: #3181A6;
+    border-bottom: 1px solid  #3181A6;
+}
