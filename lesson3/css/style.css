@@ -1,0 +1,58 @@
+body {
+    width: 1065px;
+    margin: 0 auto;
+    background-image: url("../images/backgroundMinlan.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #fff;
+    font-family: "Adobe Invis Font", Verdana, Courier, sans-serif;
+}
+a {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 170px; /* область действия ссылки*/
+    text-decoration: none;
+    color: #fff;
+}
+/*логотип-ссылка*/
+.logo {
+    display: inline-block;
+    width: 168px;
+    float: left; /*  позиционирование логотипа и контактов в header*/
+    margin: 49px 0 44px 0;
+}
+.logoIcon img, .logoIcon h1, .logo h2, .cards img  {
+    display: inline-block; /*для возможности размещения на ширине 168px и карточек галереи*/
+}
+.logoIcon img {
+    float: left;
+    margin-top: 8px; /* выравниваем логотим  по низу с логотекстом*/
+}
+.logoText {
+    margin-left: 59px; /* расстояние между логокартинкой и логотекстом*/
+}
+.logoText h1, .logoText h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.logoText h1 {
+    font-size: 29px;
+}
+.logoText h2 {
+    font-size: 18px;
+}
+.contact {
+    text-align: right;
+    padding: 64px 5px 0 0; /* выравниваем стоки с логотипом*/
+}
+/* Карточки*/
+.gallery {
+    clear: both;
+}
+.cards  {
+    float: left;
+}
+/*подвал*/
+footer {
+    clear: both; /*отмена обтекания*/
+}
