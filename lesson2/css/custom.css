@@ -6,26 +6,26 @@ body {
     margin: 0 auto;
 }
 a {
-    text-decoration: none;
-    text-decoration-color: black;
     display: inline-block;
+    text-decoration: none;
+    color: black;
 }
-/*Редактирует заголовок*/
+/*Редактирует логотип*/
 .logo {
     font-size: 80px;
     font-weight: bold;
-    color: black;
     padding: 64px 0 44px 0;
 }
 .logo span {
     color: #4BCAFF;
 }
+/*Меню заголовка*/
 .topMenu {
     background-color: #35444F;
+    text-align: center;
 }
 .topMenu a {
     font-size: 24px;
-    text-align: center;
     color: white;
     padding: 22px 41px 21px 41px;
     border-left: 1px solid #35444F;
@@ -36,69 +36,78 @@ a {
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
 }
-container {
-    /*width: 1280px;*/
-    position: absolute;
-}
+/*Основная часть*/
+     /*Боковое меню*/
 .sidebar {
     float: left;
-    width: 27%;
+    width: 344px;
     border: 1px solid #000;
+    margin-top: 51px;
+    /*background-color: #DBDBDB00;*/
 }
 .sidebar a {
+    box-sizing: border-box;
     padding: 30px 44px;
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
+    letter-spacing: -0.05em; /*уменьшим расстояние между буквами*/
     color: #495863;
 }
 .sidebar a:hover {
+    width: 344px;
     color: black;
-    padding: 30px 69px;
+    padding: 30px 70px;
     background-color: #DBDBDB;
+    transition: 500ms;
 }
+   /*Основа*/
 .main {
     margin-top: 51px;
     margin-left: 395px;
-    margin-bottom: 21px;
+    /*margin-bottom: 21px;*/
 }
 .main .imageBlock {
-    /*width: 885px;*/
-    /*height: 529px;*/
-    background-image: url("../image/top-img-fon@1X.png");
-    background-repeat: no-repeat;
-
-}
-.main .goal {
-    display: inline-block;
-    background-image: url("../image/top-img-fon@1X.png");
-    background-origin: content-box;
     margin-bottom: 50px;
-    /*top: 150px;*/
-    /*left: 150px;*/
+}
+.backlayer, .goat {
+    display: inline-block;
+}
+/* Позиционирование изображения на предыдущем inline-block */
+.goat {
+    margin: -455px 0 0 280px;
+    transition: 1s; /* Время эффекта */
+}
+.goat:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+
 }
 .main p {
     font-size: 18px;
     text-align: justify;
     margin: 0 40px 30px 30px;
 }
+/*Редактируем подвал*/
 footer {
-    position: absolute;
     margin-top: 51px;
     border-bottom: 24px solid #fff;
     background-color: #B4B7BA;
 }
-.copyright {
+/* подгонка абзаца под footer вручную*/
+.copyright p {
     float: right;
-    margin: 25px 34px 21px 0;
+    padding: 25px 34px 21px 0;
+    margin: 0;
     font-size: 24px;
 }
 .bottomMenu {
-    margin: 51px 405px 21px 24px;
     font-size: 24px;
+    text-align: left;
+    padding-left: 42px;
+    padding-bottom: 18px;
 }
 .bottomMenu a {
-    color: #000;
+    padding: 25px 2px  2px 2px;
 }
 .bottomMenu a:hover {
     color: #3181A6;
