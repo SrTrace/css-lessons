@@ -1,58 +1,88 @@
+* {
+    box-sizing: border-box;
+}
 body {
-    width: 1065px;
-    margin: 0 auto;
+    font-family:Courier, MyriadPro-Regular, sans-serif;
+    font-size: 62.5%;
+    ;
+}
+.container {
     background-image: url("../images/backgroundMinlan.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
-    color: #fff;
-    font-family: "Adobe Invis Font", Verdana, Courier, sans-serif;
+    background-position: top;
+    color: white;
+    margin: 38px auto;
+    width: 1366px
 }
 a {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 170px; /* область действия ссылки*/
     text-decoration: none;
-    color: #fff;
+    color: white;
 }
-/*логотип-ссылка*/
+a:hover {
+    color: #F26522;
+}
+/*Header editing*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 153px ;
+    padding-top: 38px;
+}
 .logo {
+    display: block;
+}
+.logo:hover img {
+    opacity: 0;
+}
+.logo:hover {
+    color: #F26522;
+    background-image: url("../images/logo@1Xhover.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+header ul {
+    color: white;
     display: inline-block;
-    width: 168px;
-    float: left; /*  позиционирование логотипа и контактов в header*/
-    margin: 49px 0 44px 0;
-}
-.logoIcon img, .logoIcon h1, .logo h2, .cards img  {
-    display: inline-block; /*для возможности размещения на ширине 168px и карточек галереи*/
-}
-.logoIcon img {
-    float: left;
-    margin-top: 8px; /* выравниваем логотим  по низу с логотекстом*/
-}
-.logoText {
-    margin-left: 59px; /* расстояние между логокартинкой и логотекстом*/
-}
-.logoText h1, .logoText h2 {
+    list-style: none;
     font-weight: bold;
     text-transform: uppercase;
 }
-.logoText h1 {
+.logo li:first-child {
     font-size: 29px;
 }
-.logoText h2 {
+.logo li:last-child {
     font-size: 18px;
 }
 .contact {
     text-align: right;
-    padding: 64px 5px 0 0; /* выравниваем стоки с логотипом*/
+    font-size: 18px;
 }
-/* Карточки*/
-.gallery {
-    clear: both;
+/*The Gallery Cards*/
+main {
+    margin: 40px 153px 0 153px ;
 }
-.cards  {
-    float: left;
+.firstBlock, .secondBlock {
+    display: flex;
+    justify-content: space-between;
 }
-/*подвал*/
+.secondBlock {
+    margin-top: 38px;
+}
+figure img {
+    background: white;
+    box-shadow: 0 -2px 3px 1px white;
+}
+figcaption {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 5px 0 5px;
+}
+/*Footer editing*/
 footer {
-    clear: both; /*отмена обтекания*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 38px 0 20px 0;
 }

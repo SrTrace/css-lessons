@@ -67,16 +67,19 @@ a {
     margin-left: 395px;
     /*margin-bottom: 21px;*/
 }
-.main .imageBlock {
+.imageBlock {
     margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 75px 0;
 }
-.backlayer, .goat {
-    display: inline-block;
-}
+/*.backlayer, .goat {*/
+/*    display: inline-block;*/
+/*}*/
 /* Позиционирование изображения на предыдущем inline-block */
 .goat {
-    margin: -455px 0 0 280px;
+    /*margin: -455px 0 0 280px;*/
     transition: 1s; /* Время эффекта */
+    margin: 0 calc(50% - 160px);
 }
 .goat:hover {
     transform: scale(1.2); /* Увеличиваем масштаб */
@@ -94,13 +97,15 @@ footer {
     background-color: #B4B7BA;
 }
 /* подгонка абзаца под footer вручную*/
-.copyright p {
-    float: right;
+.copyright {
+    display: inline;
+    /*float: right;*/
     padding: 25px 34px 21px 0;
     margin: 0;
     font-size: 24px;
 }
 .bottomMenu {
+    display: inline;
     font-size: 24px;
     text-align: left;
     padding-left: 42px;
@@ -108,6 +113,8 @@ footer {
 }
 .bottomMenu a {
     padding: 25px 2px  2px 2px;
+    border-bottom: 1px solid  transparent;
+
 }
 .bottomMenu a:hover {
     color: #3181A6;
