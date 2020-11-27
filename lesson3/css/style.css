@@ -4,7 +4,6 @@
 body {
     font-family:Courier, MyriadPro-Regular, sans-serif;
     font-size: 62.5%;
-    ;
 }
 .container {
     background-image: url("../images/backgroundMinlan.jpg");
@@ -18,9 +17,6 @@ a {
     text-decoration: none;
     color: white;
 }
-a:hover {
-    color: #F26522;
-}
 /*Header editing*/
 header {
     display: flex;
@@ -28,34 +24,47 @@ header {
     margin: 0 153px ;
     padding-top: 38px;
 }
-.logo {
-    display: block;
-}
-.logo:hover img {
-    opacity: 0;
-}
-.logo:hover {
-    color: #F26522;
-    background-image: url("../images/logo@1Xhover.png");
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
 header ul {
     color: white;
-    display: inline-block;
+    display: block;
     list-style: none;
     font-weight: bold;
     text-transform: uppercase;
 }
+/*Logotype editing - start*/
+.logo ul {
+    float: right;
+    list-style-type: none;
+    padding-left: 15px;
+    color: white;
+}
 .logo li:first-child {
-    font-size: 29px;
+    font-size: 26px;
+    margin-bottom: -2px; /*reducing space between milan and holliday */
 }
 .logo li:last-child {
     font-size: 18px;
 }
+.logo a:hover ul {
+    color: #F26522;
+}
+.logo img {
+    display: inline-block;
+}
+.logo a img:nth-child(2) { /*last-child don't work.Why? */
+    display: none;
+}
+.logo a:hover img:nth-child(2) {
+    display: inline-block; /* without this browser don't see second img*/
+}
+.logo a:hover img:first-child {
+    display: none;
+}
+/*Logotype editing - end*/
 .contact {
     text-align: right;
     font-size: 18px;
+    margin-top: 8px; /*alignment with Holliday*/
 }
 /*The Gallery Cards*/
 main {
@@ -68,15 +77,50 @@ main {
 .secondBlock {
     margin-top: 38px;
 }
-figure img {
+.cards img {
     background: white;
     box-shadow: 0 -2px 3px 1px white;
+    position: relative; /*for hidden details*/
+    z-index: 3;
 }
 figcaption {
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
     padding: 5px 5px 0 5px;
+}
+/*hidden details on images*/
+.details {
+    position: relative;
+    list-style-type: none;
+    background-color: #F26522;
+    color: white;
+    padding: 20px 5px 15px 20px;
+    margin-top: -67px;
+    width: 307px;
+    height: 63px;
+    /*opacity: 0;*/
+    z-index: 2;
+}
+.details li:first-child {
+    font-size: 10px;
+}
+.details li:last-child {
+    font-size: 20px;
+}
+.details li:last-child::after {
+    content: "View details >";
+    font-size: 14px;
+    float: right;
+    margin-right: 15px;
+    padding-top: 5px;
+}
+.gallery a:hover {
+    color: #F26522;
+    z-index: 1;
+}
+.gallery img:hover { /*bad work on details info*/
+    z-index: 1;
 }
 /*Footer editing*/
 footer {
