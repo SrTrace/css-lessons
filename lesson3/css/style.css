@@ -11,7 +11,7 @@ body {
     background-position: top;
     color: white;
     margin: 38px auto;
-    width: 1366px
+    width: 1366px;
 }
 a {
     text-decoration: none;
@@ -64,7 +64,7 @@ header ul {
 .contact {
     text-align: right;
     font-size: 18px;
-    margin-top: 8px; /*alignment with Holliday*/
+    margin-top: 8px; /*alignment by line with Holliday*/
 }
 /*The Gallery Cards*/
 main {
@@ -81,7 +81,7 @@ main {
     background: white;
     box-shadow: 0 -2px 3px 1px white;
     position: relative; /*for hidden details*/
-    z-index: 3;
+    z-index: 3; /*will be changed by hover*/
 }
 figcaption {
     font-size: 18px;
@@ -96,10 +96,9 @@ figcaption {
     background-color: #F26522;
     color: white;
     padding: 20px 5px 15px 20px;
-    margin-top: -67px;
+    margin-top: -67px; /* placed under img*/
     width: 307px;
     height: 63px;
-    /*opacity: 0;*/
     z-index: 2;
 }
 .details li:first-child {
@@ -117,9 +116,8 @@ figcaption {
 }
 .gallery a:hover {
     color: #F26522;
-    z-index: 1;
 }
-.gallery img:hover { /*bad work on details info*/
+.gallery a:hover img {
     z-index: 1;
 }
 /*Footer editing*/
