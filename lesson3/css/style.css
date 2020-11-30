@@ -1,29 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
 body {
-    font-family:Courier, MyriadPro-Regular, sans-serif;
+    font-family: Courier, MyriadPro-Regular, sans-serif;
     font-size: 62.5%;
 }
+
 .container {
     background-image: url("../images/backgroundMinlan.jpg");
     background-repeat: no-repeat;
-    background-position: top;
+    /*background-position: top;*/
     color: white;
-    margin: 38px auto;
-    width: 1366px;
+    margin: calc(50vh - 360px) auto;
+    max-width: 1366px;
+    width: 100%;
+    background-size: cover;
 }
+
 a {
     text-decoration: none;
     color: white;
 }
+
 /*Header editing*/
 header {
     display: flex;
     justify-content: space-between;
-    margin: 0 153px ;
-    padding-top: 38px;
+    margin: 0 auto;
+    padding: 38px 153px 0;
 }
+
 header ul {
     color: white;
     display: block;
@@ -31,64 +38,82 @@ header ul {
     font-weight: bold;
     text-transform: uppercase;
 }
+
 /*Logotype editing - start*/
-.logo ul {
-    float: right;
+.logoLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /*float: right;*/
     list-style-type: none;
     padding-left: 15px;
     color: white;
 }
+
 .logo li:first-child {
     font-size: 26px;
     margin-bottom: -2px; /*reducing space between milan and holliday */
 }
+
 .logo li:last-child {
     font-size: 18px;
 }
+
 .logo a:hover ul {
     color: #F26522;
 }
+
 .logo img {
     display: inline-block;
 }
+
 .logo a img:nth-child(2) { /*last-child don't work.Why? */
     display: none;
 }
+
 .logo a:hover img:nth-child(2) {
     display: inline-block; /* without this browser don't see second img*/
 }
+
 .logo a:hover img:first-child {
     display: none;
 }
+
 /*Logotype editing - end*/
 .contact {
     text-align: right;
     font-size: 18px;
     margin-top: 8px; /*alignment by line with Holliday*/
 }
+
 /*The Gallery Cards*/
 main {
-    margin: 40px 153px 0 153px ;
+    margin: 40px 153px 0 153px;
 }
+
 .firstBlock, .secondBlock {
     display: flex;
     justify-content: space-between;
 }
+
 .secondBlock {
     margin-top: 38px;
 }
+
 .cards img {
     background: white;
     box-shadow: 0 -2px 3px 1px white;
     position: relative; /*for hidden details*/
     z-index: 3; /*will be changed by hover*/
 }
+
 figcaption {
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
     padding: 5px 5px 0 5px;
 }
+
 /*hidden details on images*/
 .details {
     position: relative;
@@ -101,12 +126,15 @@ figcaption {
     height: 63px;
     z-index: 2;
 }
+
 .details li:first-child {
     font-size: 10px;
 }
+
 .details li:last-child {
     font-size: 20px;
 }
+
 .details li:last-child::after {
     content: "View details >";
     font-size: 14px;
@@ -114,12 +142,15 @@ figcaption {
     margin-right: 15px;
     padding-top: 5px;
 }
+
 .gallery a:hover {
     color: #F26522;
 }
+
 .gallery a:hover img {
     z-index: 1;
 }
+
 /*Footer editing*/
 footer {
     display: flex;

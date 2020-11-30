@@ -1,0 +1,207 @@
+body {
+    font-family: Verdana, Courier, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    background: url("../images/rana-sawalha-364253-unsplash@1X.png") no-repeat;
+    max-width: 1366px;
+    min-width: 650px;
+    width: 100%;
+    background-size: cover;
+    margin: calc(50vh - 384px) auto;
+}
+
+/*Header *************/
+header {
+    background-color: #000000;
+    opacity: 0.4117647058823529;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+header p {
+    padding: 20px 0 20px 0;
+    font-weight: bold;
+}
+
+header div:first-child {
+    flex-grow: 2;
+    padding-left: 80px;
+}
+
+header div:last-child {
+    padding-left: 30px;
+    padding-right: 80px;
+}
+
+.Icons {
+    align-self: center;
+}
+
+.Icons a {
+    display: inline-block;
+    width: 33px;
+    height: 40px;
+
+}
+
+.calendar {
+    background: url("../images/icons/css_sprites.png") no-repeat;
+}
+
+.forum {
+    background: url("../images/icons/css_sprites.png") no-repeat;
+    background-position: -85px 0;
+}
+
+.journey {
+    background: url("../images/icons/css_sprites.png") no-repeat;
+    background-position: -46px 0;
+}
+
+.Icons .journey {
+    border-image: url("../images/icons/line@1X.png"); /*need fix*/
+}
+
+.LogoType span:hover {
+    color: #3CB878;
+}
+
+.Icons a:hover {
+    box-shadow: 3px 3px 4px mediumseagreen;
+}
+
+.Registration a:hover {
+    color: #3CB878;
+    text-decoration: underline;
+}
+
+/*Form********************/
+form {
+    max-width: 444px;
+    width: 100%;
+    background-color: white;
+    margin: 65px auto;
+    padding: 30px 60px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.formHead {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+    position: relative; /* for pseudo before*/
+}
+
+.SignUp {
+    font-size: 20px;
+}
+
+.LogIn {
+    margin-top: 5px;
+    color: #3CB878;
+}
+
+.formHead::before {
+    content: "";
+    background-image: url("../images/shape@1X.png");
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -60px;
+}
+
+.ba {
+    width: 158px;
+    height: 47px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 16px;
+}
+
+.baFacebook {
+    background-color: #305DB8;
+    position: relative;
+}
+
+.baFacebook::before {
+    content: "";
+    background-image: url("../images/icons/facebook1.svg");
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+}
+
+.baGoogle {
+    background-color: #DF4A32;
+    position: relative;
+}
+
+.baGoogle::before {
+    content: "";
+    background-image: url("../images/icons/G+.svg");
+    width: 25px;
+    height: 16px;
+    position: absolute;
+    left: 15px;
+}
+
+.borderLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstLine, .secondLine {
+    width: 135px;
+    background: url("../images/line@1Xhorisontal.png") no-repeat;
+    margin-top: 8px;
+}
+
+.line {
+    margin-bottom: 15px;
+    padding: 0 15px 0 15px;
+}
+
+input[type=text] {
+    width: 322px;
+    height: 46px;
+    /*border: 1px solid rgba(128,128,128,0.3);*/
+}
+
+.textForm:hover {
+    box-shadow: 0 2px 4px grey;
+    /*border: 1px solid rgba(128,128,128,0);*/
+}
+
+.textForm {
+    margin-bottom: 17px;
+}
+
+.checkbox {
+    margin: 22px 0 28px 0;
+}
+
+.checkbox a {
+    color: #3CB878;
+}
+
+.Account {
+    width: 322px;
+    height: 46px;
+    background-color: #3CB878;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+}
