@@ -18,7 +18,7 @@ a {
 }
 
 /*Header *************/
-header {
+header, footer {
     background-color: #000000;
     opacity: 0.4117647058823529;
     color: white;
@@ -52,18 +52,17 @@ header div:last-child {
 
 }
 
+/* Using the sprite for icons*/
 .calendar {
     background: url("../images/icons/css_sprites.png") no-repeat;
 }
 
 .forum {
-    background: url("../images/icons/css_sprites.png") no-repeat;
-    background-position: -85px 0;
+    background: url("../images/icons/css_sprites.png") no-repeat -85px 0;
 }
 
 .journey {
-    background: url("../images/icons/css_sprites.png") no-repeat;
-    background-position: -46px 0;
+    background: url("../images/icons/css_sprites.png") no-repeat -46px 0;
 }
 
 .Icons .journey {
@@ -83,6 +82,8 @@ header div:last-child {
     text-decoration: underline;
 }
 
+/*Main content*/
+/*-----------*/
 /*Form********************/
 form {
     max-width: 444px;
@@ -119,6 +120,7 @@ form {
     left: -60px;
 }
 
+/* buttons Facebook and Google*/
 .ba {
     width: 158px;
     height: 47px;
@@ -157,6 +159,7 @@ form {
     left: 15px;
 }
 
+/*Line between buttons F,G and input form*/
 .borderLine {
     display: flex;
     justify-content: space-between;
@@ -173,29 +176,28 @@ form {
     padding: 0 15px 0 15px;
 }
 
+/*Block input*/
 input[type=text] {
     width: 322px;
     height: 46px;
-    /*border: 1px solid rgba(128,128,128,0.3);*/
+    padding-left: 25px;
+    border-color: #8080800f;
 }
 
 .textForm:hover {
     box-shadow: 0 2px 4px grey;
-    /*border: 1px solid rgba(128,128,128,0);*/
 }
 
 .textForm {
     margin-bottom: 17px;
 }
 
-.checkbox {
-    margin: 22px 0 28px 0;
-}
-
+/*Checkbox editing*/
 .checkbox a {
     color: #3CB878;
 }
 
+/*button Create Acc*/
 .Account {
     width: 322px;
     height: 46px;
