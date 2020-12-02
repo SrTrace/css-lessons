@@ -10,18 +10,18 @@
 <body>
 <div class="container">
     <header>
-        <div class="LogoType">
-            <p><span>JOURNEY</span></p>
+        <div>
+            <span class="LogoType">JOURNEY</span>
         </div>
         <div class="Icons">
             <a href="#" class="calendar"></a>
             <a href="#" class="forum"></a>
             <a href="#" class="journey"></a>
         </div>
-        <div class="Registration">
+        <div>
             <p>Welcome,
-                <a href="#">Log In</a> or
-                <a href="#">Sign Up</a>
+                <a class="link-color" href="#">Log In</a> or
+                <a class="link-color" href="#">Sign Up</a>
             </p>
         </div>
     </header>
@@ -30,35 +30,20 @@
             <span class="SignUp">Sign Up</span>
             <span class="LogIn">Log In</span>
         </p>
-        <p>
-            <button class="ba baFacebook" type="button">Facebook</button>
-            <button class="ba baGoogle" type="button">Google</button>
-        </p>
-        <div class="borderLine">
-            <p class="firstLine"></p>
+        <button class="social-btn fb-btn" type="button">Facebook</button>
+        <button class="social-btn google-btn" type="button">Google</button>
+        <div class="underline-social-btn">
+            <p class="first-line"></p>
             <p class="line">or</p>
-            <p class="secondLine"></p>
+            <p class="second-line"></p>
         </div>
-
-        <p class="textForm">
-            <input type="text" placeholder="  Name">
-        </p>
-        <p class="textForm">
-            <input type="text" placeholder="  Last Name">
-        </p>
-        <p class="textForm">
-            <input type="text" placeholder="  Choose Password">
-        </p>
-        <p class="textForm">
-            <input type="text" placeholder="  Confirm Password">
-        </p>
-        <p class="textForm">
-            <input type="checkbox" name="Agree our" id="Agree">
-            <label for="Agree" class="checkbox">Agree our<a href="#"> Terms & Conditions</a></label>
-        </p>
-        <p class="createAcc">
-            <button class="Account" type="button">Create Account</button>
-        </p>
+        <input type="text" placeholder="Name" class="InputField textForm">
+        <input type="text" placeholder="Last Name" class="InputField textForm">
+        <input type="text" placeholder="Choose Password" class="InputField textForm">
+        <input type="text" placeholder="Confirm Password" class="InputField textForm">
+        <input class="custom-checkbox checkboxForm" type="checkbox" id="Agree" name="color-5" value="green">
+        <label for="Agree" class="checkbox">Agree our<a href="#"> Terms & Conditions</a></label>
+        <button class="btn-create-account" type="button">Create Account</button>
     </form>
     <footer>FOOTER</footer>
 </div>
