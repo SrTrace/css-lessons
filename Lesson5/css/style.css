@@ -1,0 +1,205 @@
+body {
+    font-family: Arimo, Courier, sans-serif;
+    font-size: 16px;
+	position: relative;
+}
+
+.container {
+    max-width: 1192px;
+    margin: 20px auto;
+    background-color: #3A4965;
+	position: absolute;
+	left: 5%;
+	top: 10%;
+}
+
+/*Common table property*/
+.pricing_table {
+    background-color: #FAFAFA;
+    margin: 24px;
+    max-width: 1144px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+col {
+    width: 25%;
+}
+
+col:nth-child(n+2) {
+    border-left: 2px solid #9c9c9c3d;
+}
+
+tbody {
+    background-color: #F2F2F2;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #E3E3E3;
+}
+
+th, td {
+    padding: 28px 0 28px 0;
+}
+
+/*top-left cell*/
+.choose_plan {
+    width: 310px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.choose_plan span {
+    font-size: 30px;
+}
+
+/*  left column with icons*/
+.service {
+	/*position: relative;*/
+}
+.service_storage:before, 
+.service_bandwidth:before,
+.service_email:before,
+.service_support:before,
+.service_products:before,
+.service_users:before {
+	display: inline-block;
+	width: 24px;
+    transform: translateX(-5px) translateY(5px);
+}
+.service_storage:before {
+    content: url("../images/archive.svg");
+}
+
+.service_bandwidth:before {
+    content: url("../images/cloud-upload-alt.svg");
+}
+
+.service_email:before {
+    content: url("../images/envelope.svg");
+}
+
+.service_support:before {
+    content: url("../images/life-ring.svg");
+}
+
+.service_products:before {
+    content: url("../images/cube.svg");
+}
+
+.service_users:before {
+    content: url("../images/users.svg");
+}
+
+/*table header*/
+.type_plan {
+    font-size: 24px;
+    color: white;
+}
+
+.plan-st {
+    background-color: #89C331;
+}
+
+.plan-ul {
+    background-color: #F04A56;
+}
+
+.plan-pre {
+    background-color: #20807C;
+}
+
+/*row with price per month*/
+.price {
+    padding: 20px 0;
+	font-size: 60px;
+    margin-left: 35px;
+}
+.cents {
+	font-size: 24px;
+	top: -25px;
+}
+.period {
+	font-size: 18px;
+	margin-left: -30px;
+}
+/*.dollar {
+    display: inline-block;
+    float: left;
+    font-size: 60px;
+    margin-left: 35px;
+}
+
+.cents {
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px 100px 0 0;
+}
+
+.period {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 28px;
+}*/
+
+/*table footer*/
+.tfooter {
+    margin: 28px 42px;
+}
+
+.tfooter td:first-child {
+    background-color: #DDDDDD;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 60px;
+    border-radius: 5px;
+    border: none;
+	transition: 400ms;
+	outline: none;
+}
+
+.btn:active {
+ /* background-color: #3e8e41;*/
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+.contact_us {
+    background-color: #484848;
+    box-shadow: 0 4px 3px #404040;
+	padding: 15px 45px;
+}
+.contact_us:hover {
+	color: #484848;
+	 background-color: white;
+}
+.btn-st {
+    background-color: #89C331;
+    box-shadow: 0 4px 3px #62a500;
+}
+.btn-st:hover {
+	color: #89C331;
+	 background-color: white;
+}
+.btn-ul {
+    background-color: #F04A56;
+    box-shadow: 0 4px 3px #DF3A46;
+}
+.btn-ul:hover {
+	color: #F04A56;
+	 background-color: white;
+}
+.btn-pre {
+    background-color: #20807C;
+    box-shadow: 0 4px 3px #16736F;
+}
+.btn-pre:hover {
+	color: #20807C;
+	 background-color: white;
+}

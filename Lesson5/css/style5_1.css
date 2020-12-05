@@ -1,0 +1,155 @@
+body {
+    font-family: Arimo, Courier, sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+.container {
+    max-width: 1198px;
+    margin: 20px auto;
+    background-color: #3A4965;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+}
+
+/*Common table property*/
+.pricing_table {
+    background-color: #FAFAFA;
+    margin: 24px;
+    max-width: 1142px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+th {
+    font-size: 20px;
+}
+
+tr:nth-child(n+1) {
+    border-top: 2px solid #9c9c9c3d;
+}
+
+col:nth-child(even) {
+    background-color: #E3E3E3;
+}
+
+col {
+    width: 158px;
+}
+
+tbody td {
+    vertical-align: middle;
+}
+
+/*top-left cell*/
+.choose_plan {
+    width: 199px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.choose_plan span {
+    font-size: 20px;
+    vertical-align: baseline;
+}
+
+.type_plan {
+    font-size: 24px;
+    color: white;
+    padding: 16px 0 20px 0;
+}
+
+.plan-st {
+    background-color: #89C331;
+}
+
+.plan-ul {
+    background-color: #F04A56;
+}
+
+.plan-pre {
+    background-color: #20807C;
+}
+
+/*row with price per month*/
+.dollar {
+    padding: 24px 0;
+    font-size: 36px;
+    padding-top: 20px;
+}
+
+.cents {
+    font-size: 18px;
+    top: -5px;
+}
+
+.period {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.service {
+    padding: 33px 0;
+}
+
+.service_storage:before,
+.service_bandwidth:before,
+.service_email:before,
+.service_support:before,
+.service_products:before,
+.service_users:before {
+    display: block;
+    width: 24px;
+    transform: translateX(60px);
+}
+
+.service_storage:before {
+    content: url("../images/archive.svg");
+}
+
+.service_bandwidth:before {
+    content: url("../images/cloud-upload-alt.svg");
+}
+
+.service_email:before {
+    content: url("../images/envelope.svg");
+}
+
+.service_support:before {
+    content: url("../images/life-ring.svg");
+}
+
+.service_products:before {
+    content: url("../images/cube.svg");
+}
+
+.service_users:before {
+    content: url("../images/users.svg");
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    transition: 400ms;
+    outline: none;
+    background-color: #484848;
+    box-shadow: 0 4px 3px #404040;
+    padding: 15px 45px;
+}
+
+.btn:active {
+    /* background-color: #3e8e41;*/
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.btn:hover {
+    color: #484848;
+    background-color: white;
+}
