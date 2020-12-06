@@ -7,21 +7,22 @@ body {
 .container {
     max-width: 1192px;
     margin: 20px auto;
-    background-color: #3A4965;
-	position: absolute;
-	left: 5%;
-	top: 10%;
+    /*background-color: #3A4965;*/
+	/*position: absolute;*/
+	/*left: 5%;*/
+	/*top: 10%;*/
 }
 
 /*Common table property*/
 .pricing_table {
     background-color: #FAFAFA;
     margin: 24px;
-    max-width: 1144px;
     width: 100%;
+    /*max-width: 1144px;*/
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    border: 20px solid #3A4965;
 }
 
 col {
@@ -41,7 +42,7 @@ tbody tr:nth-child(2n) {
 }
 
 th, td {
-    padding: 28px 0 28px 0;
+    padding: 28px 0;
 }
 
 /*top-left cell*/
