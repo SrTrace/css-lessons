@@ -1,0 +1,293 @@
+body {
+    font-family: "Font Awesome", Courier, "Open Sans", sans-serif;
+    font-size: 16px;
+    max-width: 1900px;
+}
+
+header {
+    color: white;
+    width: 100%;
+}
+
+.topMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #1D2124;
+}
+
+.logotype img {
+    background-color: #1A1D20;
+    padding: 22px;
+    vertical-align: middle;
+}
+
+.logotypeText {
+    font-size: 22px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 15px;
+    padding: 5px;
+}
+
+.linkMenu {
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.linkMenu:hover {
+    color: #169CB4;
+    font-size: 18px;
+}
+
+.search {
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    padding: 20px;
+    pointer-events: none;
+    top: 6px;
+    left: 8px;
+}
+
+.site-search {
+    background-color: #1A1D20;
+    padding: 0;
+    width: 68px;
+    height: 71px;
+    border-style: none;
+    outline: none;
+}
+
+.latestNews {
+    height: 386px;
+    background: url("../img/header-bg.jpeg") no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.latestNews h2 {
+    font-size: 27px;
+    margin-bottom: 44px;
+    text-transform: uppercase;
+}
+
+/*buttons arrangement*/
+.btnStyle {
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+    width: 170px;
+    height: 55px;
+    margin: 10px;
+    outline: none;
+}
+
+.btnStyle:hover {
+    box-shadow: 0 0 5px 5px white;
+}
+
+.btnStyle:active {
+    transform: translateY(2px);
+}
+
+.subscribe {
+    background-color: #89CA62;
+}
+
+.bestArticles {
+    background-color: #14B9D5;
+}
+
+/*end btn arrangement*/
+
+.posts, .news, .footerWrap {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.posts h2, .news h2,
+.clients h2, .topRated h2 {
+    font-size: 27px;
+    color: #18B4CF;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 60px 0 32px;
+}
+
+.verticalMasonry {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    max-height: 1030px;
+    padding-bottom: 72px;
+}
+
+.masonryBrick {
+    margin: 10px;
+    background-color: #afaeae29;
+}
+
+.masonryBrick a {
+    text-decoration: none;
+    color: black;
+}
+
+.masonryBrick figcaption {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.clients {
+    height: 590px;
+    background: url("../img/parallax-bg.svg") no-repeat center fixed;
+    background-size: contain;
+}
+
+.clients h2 {
+    font-size: 32px;
+    color: white;
+    padding: 200px 0 55px;
+}
+
+.beautyBorder {
+    padding-bottom: 55px;
+    border-bottom: 3px solid #169CB4;
+
+}
+
+.brands {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.brands img {
+    margin: 0 35px;
+    vertical-align: middle;
+}
+
+.topRated h2 {
+    padding: 63px;
+    font-size: 27px;
+}
+
+.topRatedGallery {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.topRatedGallery a {
+    max-width: 271px;
+    height: 190px;
+}
+
+/*horizontal masonry*/
+.news h2 {
+    font-size: 27px;
+    padding: 60px 0 50px;
+}
+
+/*all block with news*/
+
+.newsPreview {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.newsPreview figure {
+    margin: 0 15px 42px 0;
+    background-color: #afaeae29;
+}
+
+.newsPreview a {
+    text-decoration: none;
+    color: black;
+}
+
+/*first post and last post*/
+.post1 h3, .post8 h3 {
+    text-align: center;
+    font-weight: bold;
+    padding: 41px 0 22px;
+}
+
+.post1 p, .post8 p {
+    width: 320px;
+    height: 140px;
+    margin: 0 24px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.post1, .post8 {
+    display: flex;
+    flex-direction: row;
+}
+
+/* second and sevens posts*/
+.post2 h3, .post7 h3 {
+    padding: 14px 0 10px;
+    text-align: center;
+}
+
+/*2 and 3 rows*/
+.post3 p, .post4 p, .post5 p, .post6 p {
+    width: 505px;
+    height: 77px;
+    text-align: justify;
+    overflow: hidden;
+    margin: 26px 27px 22px 21px;
+    box-sizing: content-box;
+}
+
+.post3 h3, .post4 h3, .post5 h3, .post6 h3 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.post3 figcaption, .post4 figcaption,
+.post5 figcaption, .post6 figcaption {
+    text-align: -webkit-center;
+    padding-bottom: 20px;
+}
+
+/*Footer*/
+footer {
+    background-color: #1D2124;
+    color: white;
+    font-size: 13px;
+    margin-top: 70px;
+}
+
+.footerWrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 5px;
+    align-items: center;
+}
+
+.footerLogo:first-child {
+    vertical-align: top;
+}
