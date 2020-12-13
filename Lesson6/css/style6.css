@@ -48,9 +48,9 @@ nav li {
     color: #169CB4;
     font-size: 18px;
 }
-
-.search {
-    position: relative;
+/* search field with icon*/
+.searchWrap {
+    background-color: #1A1D20;
 }
 
 .fa-search {
@@ -58,18 +58,22 @@ nav li {
     padding: 20px;
     pointer-events: none;
     top: 6px;
-    left: 8px;
+    right: 1px;
 }
-
-.site-search {
-    background-color: #1A1D20;
+.fieldSearch {
+	position: relative;
+	background-color: transparent;
     padding: 0;
     width: 68px;
     height: 71px;
     border-style: none;
     outline: none;
+	transition: 400ms;
 }
-
+.fieldSearch:focus {
+    width: 120px;
+}
+	
 .latestNews {
     height: 386px;
     background: url("../img/header-bg.jpeg") no-repeat center fixed;
@@ -131,24 +135,26 @@ nav li {
     padding: 60px 0 32px;
 }
 
-.verticalMasonry {
+.verticalMasonry  {
     display: flex;
     flex-flow: column wrap;
     width: 100%;
     max-height: 1030px;
     padding-bottom: 72px;
 }
-
+.verticalMasonry a {
+    text-decoration: none;
+    color: black;
+}
 .masonryBrick {
     margin: 10px;
     background-color: #afaeae29;
 }
 
-.masonryBrick a {
+/*.masonryBrick  {
     text-decoration: none;
     color: black;
-}
-
+}*/
 .masonryBrick figcaption {
     font-size: 18px;
     font-weight: bold;
@@ -193,12 +199,15 @@ nav li {
 .topRatedGallery {
     display: flex;
     flex-wrap: nowrap;
+	/*overflow-x: scroll;*/ /* scrollbar*/
     width: 100%;
 }
 
 .topRatedGallery a {
-    max-width: 271px;
-    height: 190px;
+    /*max-width: 271px;*/  /*do not need if it will be the other img*/
+    height: 190px; /* fix height*/
+	width: 14.28%;
+	/*flex: 0 0 auto; */
 }
 
 /*horizontal masonry*/

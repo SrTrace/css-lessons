@@ -1,0 +1,102 @@
+html, body {
+    height: 100%; /* without this don't work line 12*/
+}
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+header, .main  {
+    flex: 1 1 auto;
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+/*header part*/
+.motivation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #445162;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+    padding: 50px;
+}
+.motivationList h1 {
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+.motivationList li {
+    margin: 0 0 20px 0;
+    background: url("../images/icons/icon.png") 0 1px no-repeat;
+    padding: 0 0 0 40px;
+}
+.motivationList li:last-child {
+    margin: 0;
+}
+/* middle part*/
+/*section 1*/
+.introduction {
+    display: flex;
+    padding: 50px;
+}
+.introductionChart {
+    flex: 0 0 430px;
+}
+.introductionText {
+    flex: 1 1 auto;
+    padding: 0 0 0 38px;
+}
+.introductionText h2 {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+.introductionText p {
+    margin: 0 0 15px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.introductionText p:last-child {
+    margin: 0 0 15px;
+}
+/*section 2*/
+.columns {
+    padding: 50px 0 20px 0;
+    background-color: #F5F5F5;
+}
+.columns h2 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+.columnsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+.columnsRow {
+    /*padding: 0 8px;*/
+    flex: 0 1 50%;
+    margin: 0 0 30px 0;
+}
+.columnsBody {
+    display: flex;
+    padding: 0 8px;
+}
+
+.columnsText {
+    padding: 0 0 0 16px;
+}
+.columnsText h3 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+.columnsText p {
+    line-height: 20px;
+}
