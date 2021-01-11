@@ -1,0 +1,379 @@
+html, body {
+    min-height: 100%;
+}
+body {
+    font-family: Roboto, sans-serif;
+}
+h2 {
+    font-size: 60px;
+}
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+/*Parallax effect start*/
+.wrapper {
+    max-width: 1400px;
+    margin:  0 auto;
+   /* max-width: 100vw;
+    padding: 0 50px; */  /*костыль для прокрутки*/
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+    perspective: 2px;
+    position: relative;
+}
+.bgLayer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateZ(-1px) scale(1.5);
+    /*background-size: 100%;*/
+    z-index: -1;
+}
+.headerLayer::after {
+    height: 100vh;
+    background: url("../img/bg1.jpg") no-repeat;
+    background-size: cover;
+}
+.companiesLayer::after {
+    height: 100vh;
+    background: url("../img/bg2.jpg") no-repeat;
+    background-size: cover;
+}
+.referenceLayer::after {
+    height: 100vh;
+    background: url("../img/bg3.jpg") no-repeat;
+    /*background-size: cover;*/
+}
+/*Parallax effect end*/
+
+/*Top header*/
+/* header logo with menu*/
+.topHeader {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background: #fff;
+    z-index: 5;
+}
+.container {
+    max-width: 990px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.logo {
+    margin: 0 20px 0 0;
+    font-size: 36px;
+}
+.logo span {
+    color: #14AFCA;
+}
+.menu {
+    flex: 1 1 auto;
+    margin: 0 -20px;
+}
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li a {
+	color: black;
+    font-size: 15px;
+    margin: 0;
+    padding: 20px;
+    transition: 400ms;
+}
+.menu ul li:first-child a {
+    color: #14AFCA;
+}
+.menu ul li a:hover {
+    transform: scale(1.5);
+    color: #0981bb;
+}
+/* end header logo with menu*/
+
+/*Blocks with triangles start*/
+
+.whatLayer::before, .crewLayer::before, .whyLayer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -98px;
+    z-index: 1;
+    width: 101%;  /*костылик для заполнения строчки справа при уменьш. экрана*/
+    height: 100px;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 0, 50% 95%); /*пятиугольник*/
+    background-color: #fff;
+}
+
+.whatLayer:after, .crewLayer:after {
+    content: '';
+    position: absolute;
+    left: -0;
+    bottom: -98px;
+    z-index: 1;
+    width: 101%;
+    height: 100px;
+    clip-path: polygon(100% 0, 100% 5%, 50% 100%, 0 5%, 0 0);
+    background-color: #fff;
+}
+
+/*Blocks with triangles end*/
+
+/*Content part*/
+
+.bgSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*header part width background*/
+.headerLayer {
+    height: 598px;
+}
+
+.Introduce {
+    height: 100%;
+    display: flex;
+	flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+	font-size: 52px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	padding: 100px 0 0 0;
+}
+.Introduce p {
+	font-size: 52px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+
+/*"What" part background with triangle*/
+.whatLayer {
+    height: 412px;
+    /*width: 100vw;*/ /*костыль для прокрутки*/
+    background-color: #fff;
+}
+
+/*Text part of "What"*/
+.what {
+    height: 100%;
+    padding: 100px 0 60px 0;
+}
+.what h2 {
+    color: #14AFCA;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+	padding: 0 0 30px 0;
+}
+.what p {
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 0 40px 0;
+    line-height: 1.5;
+}
+
+/*Companies part with background img*/
+.companiesLayer {
+    height: 718px;
+}
+
+/*Companies content part*/
+.companies {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 100px 0 80px 0;
+    color: #fff;
+}
+.companies>h2 {
+    color: #14AFCA;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 52px 0 25px 0;
+}
+.companies p {
+    font-size: 18px;
+    padding: 0 0 30px 0;
+}
+.logoCompaniesWrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.logoCompaniesWrap img {
+    width: 20%;
+    margin: 0 10px 70px;
+}
+.compoundLogo {
+    background: #fff;
+    width: 223px;
+    height: 95px;
+}
+.compoundLogo img:first-child {
+    display: inline-block;
+    width: 77px;
+    margin: 0;
+    padding: 18px 0 16px 16px;
+}
+.compoundLogo img:last-child {
+    display: inline-block;
+    width: 114px;
+    margin: 0;
+    padding: 0 0 16px 0;
+}
+
+/*Crew part*/
+.crewLayer {
+	height: 680px;
+     /*width: 100vw;*/ /*костыль для прокрутки*/
+    background-color: #fff;
+}
+.crew {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 100px 0 80px 0;
+    color: #000;
+}
+.crew>h2 {
+    color: #14AFCA;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0 15px 0;
+}
+.crew p {
+    padding: 0 0 30px 0;
+}
+
+.personality {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -44px;
+}
+
+.person1, .person2, .person3 {
+    width: 280px;
+    padding: 0 44px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+}
+.person1 p, .person2 p, .person3 p {
+    padding: 27px 0 0 0;
+}
+/*Reference part*/
+.referenceLayer {
+    padding: 100px 0 160px 0;
+    height: 579px;
+}
+
+.reference {
+    height: 100%;
+    padding: 100px 0 80px 0;
+}
+.reference h2 {
+    color: #14AFCA;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+	padding: 17px 0 10px 0;
+}
+.reference p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 0 40px 0;
+    line-height: 1.5;
+}
+.quotation blockquote {
+    color: #D3CCCC;
+    font-style: italic;
+     text-align: center;
+     padding: 0 73px;
+}
+.quotation span {
+    color: #fff;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    display: block;
+    padding: 25px 185px;
+}
+
+/*"Why" part*/
+
+.whyLayer {
+    height: 500px;
+    /* width: 100vw;*/ /*костыль для прокрутки*/
+    background-color: #fff;
+}
+.why {
+    height: 100%;
+    padding: 114px 0 80px 0;
+}
+.why h2 {
+    color: #14AFCA;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.why h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+.why p {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+/*Footer*/
+.footerLayer {
+    height: 85px;
+    background-color: #fff;
+}
+.footer {
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1.5;
+}
