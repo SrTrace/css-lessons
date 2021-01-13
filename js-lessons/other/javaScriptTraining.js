@@ -31,15 +31,15 @@
 //   	console.log( 'Маловато' );
 //     break;
 //   case 4:
-    
+
 //     console.log( 'В точку!' );
 //     break;
 //   case 5:
-    
+
 //     console.log( 'Перебор' );
 //     break;
 //   default:
-    
+
 //     console.log( "Нет таких значений" );
 // }
 
@@ -60,7 +60,7 @@
 
 //Сгенирировать случайное число от 0,9 до 1
 // Вызывать ф-ю Math.random() пока не получим
-// нужную цифру в заданном диапазоне. Вывести на 
+// нужную цифру в заданном диапазоне. Вывести на
 // экран число попыток и само число
 
 // let number;
@@ -70,7 +70,7 @@
 // 		tries++;
 // 	} while (number<0.9)
 // 	console.log("Our happy number: " + number);
-// 	console.log("Tries quantity: " + tries);	
+// 	console.log("Tries quantity: " + tries);
 
 
 // Вывести цифры которы делятся на 2 и на 3
@@ -81,7 +81,7 @@
  // 	// 	console.log(i);
  // 	// }
  // 	// условие ниже работает не правильно
- // 	// оператор "и" не верно работает с 
+ // 	// оператор "и" не верно работает с
  // 	// конструкцией !==
  // 	// Почему?
  // 	if (i %3 !== 0 || i % 2 !== 0) {
@@ -122,7 +122,7 @@
  // 	console.log("Please enter a number");
  // 	userMaxNumber = +prompt("Set a maximum number");
  // }
- 
+
  // for (let i=userMinNumber; i<=userMaxNumber; i++ ) {
  // 	if ( i%2 != 0) {
  // 		continue;
@@ -141,7 +141,7 @@
 //  	 for (let i=0; i<userNumber; i++) {
 //   		 console.log(stars.repeat(userNumber));
 //   		 console.log("\n");
-//   	} 
+//   	}
 
 //Exercise 1 Lesson 5-6 Functions
 
@@ -172,7 +172,7 @@
 // }
 // console.log(`You put a : ${userNumber}`);
 
-// //Ф-я для которая получает натуральное число и 
+// //Ф-я для которая получает натуральное число и
 // //проверяет является ли число простым (true or false)
 
 // function isPrime(x) {
@@ -180,7 +180,7 @@
 // 		if (x%i==0) {
 // 			return false;
 // 			break;
-// 		} 
+// 		}
 // 		else {
 // 			return true;
 // 		}
@@ -206,13 +206,13 @@
 
 //Replace functions grantAccess & denyAccess with arrow functions
 
-// function checkAge(age, granted, denied) { 
+// function checkAge(age, granted, denied) {
 // 	if (age < 18) denied();
 // 	else granted();
 // }
 // let age = prompt('What is your age?', 18);
 
-// let grantAccess=() => alert('Access granted'); 
+// let grantAccess=() => alert('Access granted');
 
 // let denyAccess=() => alert('Access denied');
 
@@ -273,7 +273,7 @@
 // console.log(calculator.sum());
 // console.log(calculator.mul());
 
-//Ladder 
+//Ladder
 
 // let ladder = {
 // 	step: 0,
@@ -478,3 +478,114 @@
 // console.log(arr);
 
 
+// Создание элемента
+//
+// let div = document.createElement('div');
+// div.className = "alert";
+// div.innerHTML = '<strong>Всем привет!</strong>Вы прочитали важное сообщение.';
+// console.log(typeof div);
+//
+// // Методы вставки
+//
+// document.body.append(div);
+// setTimeout(() => div.remove(), 1000);
+
+//Создайте список
+//
+// let ul = document.createElement('ul');
+// document.body.append(ul);
+//
+// while (true) {
+//     let data = prompt("Введите текст для элемента списка", "");
+//
+//     if (!data) {
+//         break;
+//     }
+//
+//     let li = document.createElement('li');
+//     li.textContent = data;
+//     ul.append(li);
+// }
+
+//Создайте дерево из объекта
+
+//     let data = {
+//     "Рыбы": {
+//         "форель": {},
+//         "лосось": {}
+//     },
+//
+//     "Деревья": {
+//         "Огромные": {
+//             "секвойя": {},
+//             "дуб": {}
+//         },
+//         "Цветковые": {
+//             "яблоня": {},
+//             "магнолия": {}
+//         }
+//     }
+// };
+// function createTree (container, obj) {
+//     container.innerHTML = createTreeText(obj);
+// }
+// function createTreeText(obj) { // отдельная рекурсивная функция
+//     let li = '';
+//     let ul;
+//     for (let key in obj) {
+//         li += "<li>" + key + createTreeText(obj[key]) + "</li>";
+//     }
+//     if (li) {
+//         ul = '<ul>' + li + '</ul>';
+//     }
+//     return ul || '';
+// }
+// createTree(container, data);
+// </script>
+// <script>
+// let data = {
+//     "Рыбы": {
+//         "форель": {},
+//         "лосось": {}
+//     },
+//
+//     "Деревья": {
+//         "Огромные": {
+//             "секвойя": {},
+//             "дуб": {}
+//         },
+//         "Цветковые": {
+//             "яблоня": {},
+//             "магнолия": {}
+//         }
+//     }
+// };
+//
+// function createTree(container, obj) {
+//     container.append(createTreeDom(obj));
+// }
+//
+// function createTreeDom(obj) {
+//     // если нет дочерних элементов, то вызов возвращает undefined
+//     // и элемент <ul> не будет создан
+//     if (!Object.keys(obj).length) return;
+//
+//     let ul = document.createElement('ul');
+//
+//     for (let key in obj) {
+//         let li = document.createElement('li');
+//         li.innerHTML = key;
+//
+//         let childrenUl = createTreeDom(obj[key]);
+//         if (childrenUl) {
+//             li.append(childrenUl);
+//         }
+//
+//         ul.append(li);
+//     }
+//
+//     return ul;
+// }
+//
+// let container = document.getElementById('container');
+// createTree(container, data);
