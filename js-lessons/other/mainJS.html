@@ -12,13 +12,128 @@
 			color: #3c763d;
 			background-color: #dff0d8;
 		}
+		.pane {
+			background: #edf5e1;
+			padding: 10px 20px 10px;
+			border-top: solid 2px #c4df9b;
+			position: relative;
+		}
+		h3 {
+			margin: 0;
+			padding-bottom: .3em;
+			font-size: 1.1em;
+		}
+		.remove-button {
+			font-size: 110%;
+			color: darkred;
+			right: 10px;
+			width: 24px;
+			height: 24px;
+			border: none;
+			background: transparent;
+			cursor: pointer;
+			position: absolute;
+			top: 5px;
+		}
+		.dropDownList {
+			float: right;
+			width: 33.33%;
+			padding-left: 50px;
+			overflow: hidden;
+		}
+		.dropDownList ul {
+			margin: 0;
+			padding-left: 20px;
+			list-style: none;
+			display: none;
+		}
+		.titleList {
+			cursor: pointer;
+		}
+		.dropDownList .titleList:before {
+			content: '▶';
+			margin-right: 5px;
+			font-size: 80%;
+			color: #00FF00;
+		}
+		.dropDownList.open .titleList::before {
+			content: '▼ ';
+		}
+		.dropDownList.open ul {
+			display: block;
+		}
+		.wrapperField {
+			margin: 20px auto;
+		}
+		#field {
+			clear: both;
+			width: 200px;
+			height: 150px;
+			border: 10px solid black;
+			background-color: #00FF00;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+			cursor: pointer;
+		}
+		p {
+			margin: 0;
+		}
+		#ball {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			transition: 1s all;
+		}
 	</style>
 </head>
 <body>
 	<h1>Hard Training</h1>
 	<div class="alert"><strong>Всем привет!</strong>Вы прочитали важное сообщение.</div>
-	<script src="javaScriptTraining.js"></script>
-	<div id="container"></div>
 
+	<div>
+		<div class="pane">
+			<h3>Лошадь</h3>
+			<p>Домашняя лошадь — животное семейства непарнокопытных, одомашненный и единственный сохранившийся подвид дикой лошади, вымершей в дикой природе, за исключением небольшой популяции лошади Пржевальского.</p>
+		</div>
+		<div class="pane">
+			<h3>Осёл</h3>
+			<p>Домашний осёл (лат. Equus asinus asinus), или ишак, — одомашненный подвид дикого осла (Equus asinus), сыгравший важную историческую роль в развитии хозяйства и культуры человека и по-прежнему широко в хозяйстве многих развивающихся стран.</p>
+		</div>
+		<div class="pane">
+			<h3>Кошка</h3>
+			<p>Кошка, или домашняя кошка (лат. Felis silvestris catus), — домашнее животное, одно из наиболее популярных(наряду с собакой) «животных-компаньонов». Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов.</p>
+		</div>
+	</div>
+	<div id="container">
+		<input id="btn" value="Push me!"  type="button">
+		<div id="dropList" class="dropDownList">
+			<span class="titleList" >Сладости (нажми меня)!</span>
+			<ul>
+				<li>Пирожное</li>
+				<li>Пончик</li>
+				<li>Мёд</li>
+			</ul>
+		</div>
+	</div>
+	<input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+	<div id="text">Текст</div>
+	<input type="button" id="vanish" onclick="this.hidden=true" value="Нажмите, чтобы спрятать эту кнопку" />
+	<div class="wrapperField">
+		<div id="field">
+			<img id="ball" src="https://ru.js.cx/clipart/ball.svg" alt="ball">
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+			<p>..................................................</p>
+		</div>
+	</div>
+	<script src="javaScriptTraining.js"></script>
 </body>
 </html>

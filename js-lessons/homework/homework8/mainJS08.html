@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#price {
+			margin: 10px 50px;
+			display: flex;
+			justify-content: space-evenly;
+		}
+		input {
+			border: 1px solid grey;
+			padding-left: 10px;
+			height: 30px;
+		}
+		input:focus {
+			outline: none;
+			border: 1px solid green;
+			box-shadow: 1px 1px 3px 3px #00ff00;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hard Training</h1>
+	<div id="price" class="wrapper">
+		<input type="text" name="inputPrice"  placeholder="Price">
+		<button>Click to add</button>
+	</div>
+	<script src="js08.js"></script>
+</body>
+</html>

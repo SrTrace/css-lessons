@@ -1,6 +1,6 @@
 // let check=prompt("Hello there");
 // console.log(typeof(check));
-// console.log(check==undefined);
+// console.log(check
 
 // let checkUser=prompt("Hello, put your login!");
 
@@ -589,3 +589,101 @@
 //
 // let container = document.getElementById('container');
 // createTree(container, data);
+
+////////////////////////////////
+
+function countRabbits () {
+    let olRab = document.createElement('ol');
+    olRab.id = 'rabCount';
+    container.append(olRab);
+    for (let i=1; i<=5; i++) {
+        console.log('Rabbit number '+ i);
+        let li = document.createElement('li');
+        li.innerHTML = 'Rabbit '+ i;
+        olRab.append(li);
+    }
+}
+btn.onclick = function(event) {
+    // вывести тип события, элемент и координаты клика
+    console.log(event.type + " на " + event.currentTarget);
+    console.log("Координаты: " + event.clientX + ":" + event.clientY);
+}
+
+btn.addEventListener('click', countRabbits);
+
+//Спрятать текст после нажатия кнопки
+//мой вар
+function hiddenText () {
+    text.hidden = true;
+}
+hider.addEventListener('click', hiddenText);
+// альтернативный из учебника
+// document.getElementById('hider').onclick = function () {
+//     document.getElementById('text').hidden = true;
+// };
+
+//Создайте кнопку, которая будет скрывать себя по нажатию.
+
+// document.getElementById('vanish').onclick = function () {
+//     document.getElementById('vanish').hidden = true;
+// };
+//или в html коде onclick="this.hidden=true"
+
+//Передвиньте по полю мяч
+//Требования:
+// Центр мяча должен совпадать с местом нажатия мыши (если это возможно без пересечения краёв поля);
+// CSS-анимация желательна, но не обязательна;
+// Мяч ни в коем случае не должен пересекать границы поля;
+// При прокрутке страницы ничего не должно ломаться;
+// Заметки:
+//
+// Код должен уметь работать с различными размерами мяча и поля, не привязываться к каким-либо фиксированным значениям.
+// Используйте свойства event.clientX/event.clientY для определения координат мыши при клике.
+
+field.onclick = function(event) {
+    // координаты поля относительно окна браузера
+    let fieldCoords = this.getBoundingClientRect();
+
+    // мяч имеет абсолютное позиционирование (position:absolute), поле - относительное (position:relative)
+    // таким образом, координаты мяча рассчитываются относительно внутреннего, верхнего левого угла поля
+    let ballCoords = {
+        top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight/2,
+        left: event.clientX - fieldCoords.left - field.clientLeft - ball.offsetWidth/2
+    };
+
+    // запрещаем пересекать верхнюю границу поля
+    if (ballCoords.top<0) ballCoords.top = 0;
+
+    // запрещаем пересекать левую границу поля
+    if (ballCoords.left<0) ballCoords.left = 0;
+
+    // // запрещаем пересекать правую границу поля
+    if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+        ballCoords.left = field.clientWidth - ball.clientWidth;
+    }
+
+    // запрещаем пересекать нижнюю границу поля
+    if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+        ballCoords.top = field.clientHeight - ball.clientHeight;
+    }
+
+    ball.style.left = ballCoords.left + 'px';
+    ball.style.top = ballCoords.top + 'px';
+};
+
+//Создать меню, которое по нажатию открывается либо закрывается
+let dropList = document.querySelector('.dropDownList'); // а так не работает Почему?
+//let dropList = document.getElementById('dropList'); // с этим работает
+let listToggle = dropList.querySelector('.titleList');
+
+ listToggle.onclick = function () {
+     dropList.classList.toggle('open');
+}
+
+// Добавить кнопку закрытия  на список сообщений
+let panes = document.querySelectorAll('.pane');
+ for ( let pane of panes) {
+     pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+     // кнопка становится первым потомком плитки (pane)
+     pane.firstChild.onclick = () => pane.remove();
+ }
