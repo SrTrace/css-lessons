@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Формы элементы управления</title>
+	<style>
+		.view,
+		.edit {
+			height: 150px;
+			width: 400px;
+			font-family: sans-serif;
+			font-size: 14px;
+			display: block;
+		}
+
+		.view {
+			/* padding + border = 3px */
+			padding: 2px;
+			border: 1px solid black;
+		}
+
+		.edit {
+			 /*замена внутреннего отступа рамкой (по-прежнему 3px, и содержимое не смещается) */
+			border: 3px solid blue;
+			padding: 0px;
+		}
+
+		.edit:focus {
+			/* удаление обводки фокуса в Safari */
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hard Training</h1>
+	<select id="genres">
+		<option value="rock">Рок</option>
+		<option value="blues" selected>Блюз</option>
+	</select>
+<hr>
+	<ul>
+		<li>Кликните на div ниже, чтобы отредактировать текст.</li>
+		<li>Нажатие на Enter или потеря фокуса с ввода сохранят содержимое.</li>
+	</ul>
+
+	HTML-код разрешён.
+
+	<div id="view" class="view">Текст</div>
+
+	<script src="javaScriptTraining.js"></script>
+</body>
+</html>
