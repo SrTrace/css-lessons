@@ -1,4 +1,4 @@
-#price {
+#priceForm {
     margin: 10px 50px;
     padding: 20px;
     height: 150px;
@@ -7,7 +7,15 @@
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid green;
-    /*position: relative;*/
+    position: relative;
+}
+.center {
+    position: relative;
+}
+.blockSpan {
+    position: absolute;
+    top: -35px;
+    left: -5px;
 }
 input {
     border: 1px solid grey;
@@ -30,6 +38,13 @@ input:focus {
     height: 30px;
     position: relative;
 }
+.errValue {
+    position: absolute;
+    padding-left: 60px;
+    margin: 5px;
+    color: red;
+    font-style: italic;
+}
 .currentPrice {
     position: absolute;
     top: 0;
@@ -37,14 +52,24 @@ input:focus {
     padding: 0 5px;
     z-index: 2;
 }
+.currentPriceValue {
+    margin: 5px 0 5px 60px;
+    padding-left: 10px;
+    border: 1px solid green;
+    border-radius: 20px;
+    display: inline-block;
+}
+.currentPriceValue>span {
+    color: green;
+}
 .remove-button {
-    font-size: 110%;
-    color: darkred;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-    border: none;
+    color: darkgreen;
+    width: 20px;
+    height: 20px;
+    border: 1px solid green;
     background: transparent;
     cursor: pointer;
-    padding-left: 10px;
+    padding: 0;
+    margin: 2px;
+    border-radius: 50%;
 }
