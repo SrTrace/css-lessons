@@ -1,0 +1,12 @@
+.wrapper {
+    background-color: #BEBEBE;
+}
+.image-to-show {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.btn-wrapper {
+    background-color: #999999;
+}
+.theme {
+    border: 1px solid rgba(0,0,0,0.5);
+}

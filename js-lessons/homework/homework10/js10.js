@@ -13,37 +13,44 @@
 const iconClick = document.querySelectorAll('.icon-password');
 const input = document.querySelectorAll('.checkPassword');
 const btn = document.querySelector('.btn');
+const modalOk = document.querySelector('.modal.Ok');
+const modalErr = document.querySelector('.modal.Err');
+const modalBtnClose = document.querySelectorAll('.close');
 
 iconClick.forEach(function (elem) {
     elem.addEventListener('click', changeIcon);
 });
 
-btn.addEventListener('click', function () {
-    this.disabled = true;
+btn.addEventListener('click', function (event) {
+    //this.disabled = true;
+    event.preventDefault(); // how to prove??
     checkInputValue();
 })
 
+modalBtnClose.forEach(function (elem) {
+    elem.addEventListener('click', function () {
+        clearModal();
+    });
+});
+
+
 function changeIcon(e) {
-    if (e.target.classList.contains('fa-eye') == true) {
-        console.log('eye');
+    if (e.target.classList.contains('fa-eye') === true) {
         e.target.classList.remove('fa-eye');
         e.target.classList.add('fa-eye-slash');
-    } else if (e.target.classList.contains('fa-eye-slash') == true) {
+    } else if (e.target.classList.contains('fa-eye-slash') === true) {
         e.target.classList.remove('fa-eye-slash');
         e.target.classList.add('fa-eye');
-        console.log('eye-slash');
     }
-    changeInputType(e);
+    changeInputType(e); // or add one more addEventListener?
 }
 
 function changeInputType(e) {
     let input = e.target.previousElementSibling;
-    if (input.type == 'password') {
+    if (input.type === 'password') {
         input.type = 'text';
-        console.log(input);
-    } else if (input.type == 'text') {
+    } else if (input.type === 'text') {
         input.type = 'password';
-        console.log(input);
     }
 }
 
@@ -55,16 +62,29 @@ function checkInputValue() {
         //     arrValue.push(input[j].value);
         //     if (arrValue[i] === arrValue[j]) {
         //         console.log('right');
+        //   modalOk.style.visibility = 'visible';
         //     } else {
         //         console.log('wrong');
+        //   modalErr.style.visibility = 'visible';
         //     }
         // }
     }
-    if (arrValue[0] === arrValue[1]) {
+    let emptyStr = " ";
+
+    if (arrValue[0] === arrValue[1] && arrValue[0].length >3) {
         console.log('right');
+        modalOk.style.visibility = 'visible';
     } else {
         console.log('wrong');
+        modalErr.style.visibility = 'visible';
     }
     console.log(arrValue);
 }
 
+function clearModal() {
+    if (modalOk.style.visibility === 'visible') {
+        modalOk.style.visibility = 'hidden';
+    } else if (modalErr.style.visibility === 'visible') {
+        modalErr.style.visibility = 'hidden';
+    }
+}

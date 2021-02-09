@@ -14,16 +14,28 @@
     <title>Show  Password</title>
   </head>
   <body>
+  <div class="modal Ok">
+      <div>
+          <button class="close">Close</button>
+          <p>`You are welcome`</p>
+      </div>
+  </div>
+  <div class="modal Err">
+      <div>
+          <button class="close">Close</button>
+          <p>`Нужно ввести одинаковые значения`</p>
+      </div>
+  </div>
     <form class="password-form" action="#" type="POST">
 			<label class="input-wrapper">
 				Ввести пароль
-				<input  class="checkPassword" type="password" value="12wqe" autocomplete="off"/>
+				<input  name="password"  class="checkPassword" type="password" placeholder="Enter password" autocomplete="off" required/>
 				<i  class="fas fa-eye icon-password"></i>
 			</label>
       <label class="input-wrapper">
 				Подтвердить пароль
-				<input  class="checkPassword" type="text" value="12wqe" autocomplete="off"/>
-				<i  class="fas fa-eye-slash icon-password"></i>
+				<input name="password" class="checkPassword" type="password" placeholder="Enter password" autocomplete="off" required/>
+				<i  class="fas fa-eye icon-password"></i>
 			</label>
 			<button type="submit" class="btn">Подтвердить</button>
     </form>

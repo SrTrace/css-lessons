@@ -1,0 +1,26 @@
+.image-to-show {
+    width: 400px;
+    height: 400px;
+}
+.one {
+    z-index: 900;
+}
+.two {
+    z-index: 800;
+    position: absolute;
+}
+.three {
+    z-index: 700;
+    position: absolute;
+}
+.four {
+    z-index: 600;
+    position: absolute;
+}
+.images-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
