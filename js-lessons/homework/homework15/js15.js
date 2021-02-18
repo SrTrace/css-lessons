@@ -34,9 +34,7 @@
         // icon for searching
         $(".searchWrap").click(function () {
             $(".fieldSearch").toggle(function () {
-                if ($(".fieldSearch").attr("display", "none"))  {
-                    $(".fieldSearch").attr("display", "block");
-                 }
+                $(".fieldSearch").attr("display", "block");
             });
         });
         // slideToggle for topRated block

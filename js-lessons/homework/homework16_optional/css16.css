@@ -1,0 +1,72 @@
+body {
+	background-image: url(V4K9beK.jpg);
+}
+.btnWrapper {
+	display: flex;
+}
+.start {
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: bolder;
+	width: 250px;
+	height: 50px;
+	margin: 10px;
+	outline: none;
+}
+
+.start:hover {
+	box-shadow: 0 0 5px 5px #8e1212;
+}
+
+.start:active {
+	transform: translateY(2px);
+}
+.wrapper {
+	width: 800px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0 auto;
+	background-color: #e85929;
+	height: 100vh;
+	opacity: 0.8;
+}
+.runningString {
+    display: none;
+	margin: 20px 0;
+	font-size: 40px;
+	color: #000;
+	font-weight: bold;
+}
+.start {
+    display: none;
+}
+.new {
+    opacity: 0;
+
+}
+.div_opacity {
+    /*transition: opacity .1s ease-in-out;*/
+    opacity: 1;
+	/*font-size: 30px;*/
+	/*color: #000;*/
+	/*font-weight: bold;*/
+}
+.calc p {
+	position: relative;
+	margin: 10px;
+	padding: 5px;
+	border-bottom: 1px solid #000;
+	font-size: 24px;
+}
+.btnClose {
+	position: absolute;
+	padding: 2px 4px;
+	top: -3px;
+	right: -75px;
+	border: 1px solid #fff;
+	border-radius:  50%;
+	cursor: pointer;
+}
