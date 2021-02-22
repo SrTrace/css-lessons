@@ -1,0 +1,54 @@
+.wrapper {
+	margin: 0 auto;
+	width: 800px;
+	height: 100vh;
+	background-color: #e1e1e1;
+	display: flex;
+	flex-flow: column nowrap;
+	
+}
+.startProcess {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 20px;
+	padding: 5px;
+	border-bottom: 4px solid black;
+}
+.btn {
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: bolder;
+	width: 250px;
+	height: 50px;
+	margin: 10px;
+	outline: none;
+}
+.btn:hover {
+	box-shadow: 0 0 5px 5px #8e1212;
+}
+.btn:active {
+	transform: translateY(2px);
+}
+.shotBlock {
+	display: inline-block;
+	border-right: 4px solid black;
+	text-align: center;
+	width: 30%;
+	font-style: italic;
+}
+.detailBlock {
+	display: inline-block;
+	text-align: center;
+	width: 68%;
+	font-style: italic;
+}
+.studentsList {
+	margin: 5px 10px;
+	padding: 3px;
+	text-align: center;
+}
+.studentsList li {
+	cursor: pointer;
+	border-bottom: 1px dashed #999999;
+}
