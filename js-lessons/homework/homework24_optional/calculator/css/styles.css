@@ -21,6 +21,20 @@ body {
   height: 40px;
 }
 
+.icon-memory {
+	display: none;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	color: black;
+	z-index: 1000;
+}
+.icon-memory-active {
+	display: block;
+}
+
 .display input {
   width: 220px;
   position: relative;

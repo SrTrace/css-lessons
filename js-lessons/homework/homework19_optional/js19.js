@@ -37,3 +37,8 @@ console.log(createCloneObject(stolenCar));
 car.color = "green";
 car.info = "owner in prison since last year";
 console.log(car);
+
+let [a, b, c] = "abc";
+let [one, two, three] = new Set([1, 2, 3]);
+console.log(c);
+console.log((two));
