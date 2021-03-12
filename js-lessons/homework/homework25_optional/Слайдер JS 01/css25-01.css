@@ -1,0 +1,28 @@
+.container {
+	margin: 0 auto;
+	width: 800px;
+}
+.wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	background-color: silver;
+}
+.slideFrame {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	margin: 5px;
+	background-color: red;
+}
+.slide-single {
+	display: inline-block;
+	transition: all ease 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 400px;
+}

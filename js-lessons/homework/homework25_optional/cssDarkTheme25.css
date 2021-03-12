@@ -1,0 +1,16 @@
+
+.wrapper {
+    background-color: #303439;
+    color: white;
+}
+.slide-single {
+    box-shadow: 0 0 10px rgb(231, 104, 93);
+}
+.btn-wrapper {
+    background-color: #303439;
+}
+.theme {
+    border: 1px solid rgb(231, 104, 93);
+    background-color: #303439;
+    color: white;
+}
