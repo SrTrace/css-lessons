@@ -1,13 +1,14 @@
 .container {
-	margin: 0 auto;
+	margin: 10px auto;
 	width: 800px;
+	background: linear-gradient(to right, #0033ff, #00ff00);
 }
 .wrapper {
+	padding-top: 10px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	background-color: silver;
 }
 .slideFrame {
 	width: 400px;
@@ -15,7 +16,8 @@
 	overflow: hidden;
 	position: relative;
 	margin: 5px;
-	background-color: red;
+	background: silver;
+	box-shadow: 0 0 4px 3px white;
 }
 .slide-single {
 	display: inline-block;
@@ -25,4 +27,39 @@
 	left: 0;
 	width: 400px;
 	height: 400px;
+}
+.btn {
+	border: none;
+	border-radius: 50%;
+	font-size: 50px;
+	font-weight: bolder;
+	width: 70px;
+	height: 70px;
+	margin: 10px;
+	outline: none;
+}
+.btn:hover {
+	box-shadow: 0 0 4px 3px darkred;
+}
+.btn:active {
+	transform: translateY(2px);
+}
+.slidePointer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px 250px;
+	padding-bottom: 10px;
+}
+.viewSlide {
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+.viewSlide.active {
+	background-color: white;
+	box-shadow: 0 0 10px 3px;
+	transition: all ease 0.3s;
 }

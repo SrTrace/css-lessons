@@ -15,6 +15,7 @@
 // - Пример работы слайдера можно увидеть [здесь](http://kenwheeler.github.io/slick/) (первый пример).
 
 const images = document.querySelectorAll(".slide-single");
+const slidePointer = document.querySelectorAll(".viewSlide");
 
 const imageSrc = [];
 for (let i = 0; i < images.length; i++) {
@@ -22,8 +23,8 @@ for (let i = 0; i < images.length; i++) {
     images[i].remove();
 }
 
-let step = 0;
-let offset = 0;
+// let step = 0;
+// let offset = 0;
 
 const frame = document.querySelector(".slideFrame");
 
@@ -86,7 +87,7 @@ function left() {
         } else if (leftAttr === "0px") {
             item.style.left = "-400px";
         } else if (leftAttr === "400px") {
-            item.style.left = "0";
+            item.style.left = "0px";
             nextPos = Number(item.dataset.index) + 1;
         }
     });
@@ -99,6 +100,7 @@ function left() {
     slide.dataset.index = `${nextPos}`;
     slide.style.left = 400 + 'px';
     frame.appendChild(slide);
+    showSlidePointer(slides);
 }
 
 function right() {
@@ -111,7 +113,7 @@ function right() {
         } else if (leftAttr === "0px") {
             slides[i].style.left = "400px";
         } else if (leftAttr === "-400px") {
-            slides[i].style.left = "0";
+            slides[i].style.left = "0px";
             nextPos = Number(slides[i].dataset.index) - 1;
         }
     }
@@ -124,7 +126,24 @@ function right() {
     slide.dataset.index = `${nextPos}`;
     slide.style.left = -400 + 'px';
     frame.appendChild(slide);
+    showSlidePointer(slides);
 }
 
+function showSlidePointer(slides) {
+    let slideIndex;
+    slides.forEach(item => {
+        let leftPosition = item.style.getPropertyValue("left");
+        if (leftPosition === "0px") {
+            slideIndex = item.dataset.index;
+        }
+    });
+    slidePointer.forEach(pointer => {
+        pointer.classList.remove("active");
+        if (pointer.dataset.pos === slideIndex) {
+            pointer.classList.add("active");
+        }
+    });
 
+
+}
 
