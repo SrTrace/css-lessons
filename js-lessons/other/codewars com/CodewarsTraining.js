@@ -272,7 +272,145 @@
 //   return resultStr.replace(/(^\w)|(?<=\-)\w/g, replacer).slice(0,-1);
 // }
 //or
-function accum(s) {
-    return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+// function accum(s) {
+//     return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+// }
+// console.log(accum("HbideVbxncC"));
+
+////////////////////////////////////////////////////////////////////////
+
+// Your job is to write a function which increments a string,
+// to create a new string.
+// If the string already ends with a number,
+// the number should be incremented by 1.
+// If the string does not end with a number. the number 1 should be
+// appended to the new string.
+// Examples:
+//
+// foo -> foo1
+//
+// foobar23 -> foobar24
+//
+// foo0042 -> foo0043
+//
+// foo9 -> foo10
+//
+// foo099 -> foo100
+//
+// Attention: If the number has leading zeros the amount of digits
+// should be considered.
+
+// function incrementString(str) {
+//     const endsNum = str.match(/\d+$/g); // return array with endsNum ["099"] or null
+//     console.log(`numbers at the end of str: ${endsNum}`);
+//     return (endsNum) ? replacer(str, endsNum) : str + 1;  // if endsNum true go to replacer
+// }
+//
+// function replacer(str, endsNum) {
+//     let resStr = String;
+//     const lengthNumInitial = endsNum.join('').length;
+//     //console.log(typeof endsNum.join(''));
+//     console.log( `lengthNumInitial: ${lengthNumInitial}`);
+//
+//     const num = parseInt(endsNum, 10) + 1;
+//     console.log(` increase endsNum +1: ${num}`);
+//
+//     const lengthNumFinal = num.toString().length;
+//     console.log( `lengthNumFinal: ${lengthNumFinal}`);
+//
+//     if (lengthNumInitial <= lengthNumFinal){
+//         resStr = str.replace(endsNum, num);
+//         console.log(`resStr: ${resStr}`);
+//         return resStr;
+//     }
+//     else if (lengthNumInitial > lengthNumFinal) {
+//         const odds = lengthNumInitial - lengthNumFinal;
+//         const addNull = "0".repeat(odds);
+//         console.log(`addNull: ${addNull}`);
+//
+//         const res = addNull + num;
+//         console.log(`res: ${res}`);
+//
+//         console.log(`result: ${str.replace(endsNum, res)}`);
+//         return str.replace(endsNum, res)
+//     }
+//     console.log(`initial str: ${str}`);
+// }
+
+////////////////or
+
+// const incrementString = str => str.replace(/[0-8]?9*$/, m => ++m);
+//
+// console.log(incrementString('foobar099'));
+
+/////////////////////////////////////////////////////////////////
+// 1, 246, 2, 123, 3, 82, 6, 41 are the divisors of number 246.
+// Squaring these divisors we get: 1, 60516, 4, 15129, 9, 6724, 36, 1681.
+// The sum of these squares is 84100 which is 290 * 290.
+//
+// Task
+// Find all integers between m and n (m and n integers such as 1 <= m <= n)
+// such that the sum of their squared divisors is itself a square.
+//
+// We will return an array of subarrays or of tuples (in C an array of Pair)
+// or a string. The subarrays (or tuples or Pairs) will have two elements:
+// first the number the squared divisors of which is a square and then
+// the sum of the squared divisors.
+//
+//     Example:
+// list_squared(1, 250) --> [[1, 1], [42, 2500], [246, 84100]]
+// list_squared(42, 250) --> [[42, 2500], [246, 84100]]
+// The form of the examples may change according to the language,
+// see "Sample Tests".
+//
+//     Note
+// In Fortran - as in any other language - the returned string is not
+// permitted to contain any redundant trailing whitespace: you can use
+// dynamically allocated character strings.
+/////////////////////////////
+function listSquared(m, n) {
+    let divisors = [];
+    let sumSquaredDiv =0;
+    let result = "";
+
+    for (let i=m; i<=n; i++) {
+        for (let j=1; j<=i; j++) {
+            if (i%j === 0) {
+                divisors.push(j);
+                sumSquaredDiv += j*j;
+            }
+        }
+
+        if (Number.isInteger(Math.sqrt(sumSquaredDiv))) {
+            result += i + "," + sumSquaredDiv + ",";
+        } else {
+            //console.log(`sumSquaredDiv: ${sumSquaredDiv}`);
+            sumSquaredDiv = 0;
+            divisors.length = 0;
+        }
+        //console.log(`i: ${i}`);
+    }
+
+    let perChunk = 2; // items per chunk
+
+    let inputArray = result.split(',').slice(0, -1);
+    console.log(inputArray);
+
+    return inputArray.reduce((resultArray, item, index) => {
+        const chunkIndex = Math.floor(index/perChunk);
+
+        if(!resultArray[chunkIndex]) {
+            resultArray[chunkIndex] = []; // start a new chunk
+        }
+
+        resultArray[chunkIndex].push(parseInt(item));
+
+        return resultArray;
+    }, []);
+
+    // console.log(resultF); // result: [['a','b'], ['c','d'], ['e']]
+    // console.log(Array.isArray(resultF));
+
 }
-console.log(accum("HbideVbxncC"));
+
+console.log(listSquared(42, 250));
